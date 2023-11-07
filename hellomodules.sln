@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Hellomodules", "src\Hellomodules.fsproj", "{517338A5-A198-45D1-8B4B-3C4CA8F60635}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{517338A5-A198-45D1-8B4B-3C4CA8F60635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517338A5-A198-45D1-8B4B-3C4CA8F60635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517338A5-A198-45D1-8B4B-3C4CA8F60635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517338A5-A198-45D1-8B4B-3C4CA8F60635}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

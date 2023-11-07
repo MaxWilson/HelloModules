@@ -1,0 +1,8 @@
+bin
+obj
+.*
+!.gitignore
+fable_modules
+node_modules
+.fake
+dist

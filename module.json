@@ -1,7 +1,11 @@
 {
   "id": "hellomodules",
-  "title": "HelloModules",
+  "title": "A simple module made by Max to learn how to make modules",
   "version": "0.0.1",
+  "authors": [{ "name": "Max" }],
+  "esmodules": [
+    "dist/helloModules.mjs"
+  ],
   "compatibility": {
     "minimum": "11",
     "verified": "11"
