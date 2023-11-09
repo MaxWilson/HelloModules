@@ -1,7 +1,9 @@
 {
+  "name": "helloModules",
+  "type": "module",
   "private": true,
   "scripts": {
-    "start": "dotnet tool restore && dotnet fable watch src -o dist --runFast vite --port 8080",
+    "start": "dotnet tool restore && dotnet fable watch src -o dist --runFast vite",
     "build": "dotnet tool restore && dotnet fable src -o dist --run vite build",
     "clean": "dotnet fable clean src --yes"
   },

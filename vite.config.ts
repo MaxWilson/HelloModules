@@ -3,12 +3,12 @@ import type { UserConfig } from 'vite';
 const config: UserConfig = ({
   plugins: [react()],
   publicDir: 'public',
-  base: '/src',
+  base: '/modules/helloModules/',
   server: {
     port: 30001,
     open: true,
-    proxy: {
-      '^(?!./src)': 'http://localhost:30000/',
+    proxy1: {
+      '^(?!/dist)': 'http://localhost:30000/',
       '/socket.io': {
         target: 'ws://localhost:30000',
         ws: true,
@@ -20,9 +20,10 @@ const config: UserConfig = ({
     emptyOutDir: true,
     sourcemap: true,
     lib: {
+      name: 'helloModules',
       entry: 'dist/Program.js',
       formats: ['es'],
-      fileName: 'helloModules'
+      fileName: 'Program'
     }
   },
 })

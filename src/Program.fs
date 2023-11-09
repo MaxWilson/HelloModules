@@ -1,2 +1,8 @@
 ﻿// For more information see https://aka.ms/fsharp-console-apps
-printfn "Hello from F#"
+
+open Fable.Core.JsInterop
+#if DEBUG
+emitJsStatement () """Hooks.once("init", function() {
+    CONFIG.debug.hooks = true;
+});"""
+#endif
