@@ -11,9 +11,9 @@ const config: UserConfig = ({
   base: '/modules/helloModules/',
   server: {
     port: 30001,
-    open: true,
+    open: false,
     proxy: {
-      '^(?!/dist)': 'http://localhost:30000/',
+      '^(?!/modules/helloModules/dist)': 'http://localhost:30000/',
       '/socket.io': {
         target: 'ws://localhost:30000',
         ws: true,
