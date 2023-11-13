@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "authors": [{ "name": "Max" }],
   "esmodules": [
-    "dist/Program.js"
+    "http://localhost:30001/modules/helloModules/setupReactHotloading.js",
+    "http://localhost:30001/modules/helloModules/dist/Program.js"
   ],
   "compatibility": {
     "minimum": "11",

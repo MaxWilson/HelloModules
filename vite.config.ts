@@ -13,7 +13,7 @@ const config: UserConfig = ({
     port: 30001,
     open: './index.html', // necessary to "wake up" the react plugin so it will rewrite Program.js
     proxy: {
-      '^(?!/modules/helloModules/dist)': 'http://localhost:30000/',
+      '^(?!/modules/helloModules/.*)': 'http://localhost:30000/',
       '/socket.io': {
         target: 'ws://localhost:30000',
         ws: true,
@@ -21,6 +21,7 @@ const config: UserConfig = ({
     }
   },
   build: {
+    manifest: true,
     outDir: 'dist',
     emptyOutDir: true,
     sourcemap: true,

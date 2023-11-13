@@ -1,12 +1,18 @@
-﻿// For more information see https://aka.ms/fsharp-console-apps
+﻿//module Main
 
+// For more information see https://aka.ms/fsharp-console-apps
 open Fable.Core.JsInterop
 open Fable.React
-open Feliz
+open UI.CharacterView
+let breakHere () = System.Diagnostics.Debugger.Break();
 
-let attach domNode = let root = ReactDOM.createRoot domNode in printfn "about to attach"; root.render(Html.div "Hello React")
+let attach domNode =
+    ReactDom.render(CharacterView(), domNode)
+
 #if DEBUG
-emitJsStatement (fun domNode -> ()) """Hooks.once("init", function() {
+emitJsStatement attach """
+
+Hooks.once("init", function() {
     CONFIG.debug.hooks = true;
 });
 
@@ -23,9 +29,8 @@ Hooks.on("ready", function() {
 Hooks.on('renderActorSheet', function(sheet, html, data) {
   // I'm fuzzy on the distinction between data and sheet because I think the sheet might contain a DataModel of the data. But maybe it's a nephew, not a child. (Maybe it's the actor that's has the DataModel.)
   console.log("Rendering " + data.actor.name);
-  let node = (html.find(".profile"))[0];
+  let node = (html.find(".charname"))[0];
   if(node) {
-    debugger;
     let f = $0;
     f(node);
   }

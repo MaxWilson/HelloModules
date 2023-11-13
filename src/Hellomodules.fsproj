@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="UI/CharacterView.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
