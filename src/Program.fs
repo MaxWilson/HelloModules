@@ -35,6 +35,21 @@ Hooks.on('renderActorSheet', function(sheet, html, data) {
     f(node);
   }
 });
+
+Hooks.on('renderSidebarTab', async function (app, html) {
+    if (app.options.classes.includes("actors-sidebar") && game.user.isGM) {
+        let button = $(`<div class='header-actions action-buttons flexrow'><button><i class='fas fa-users'></i> ${game.i18n.localize("ACKS.ManageParty")}</button></div>`)
+        button.on('click', async () => {
+            if (!game.users.current.isGM) {
+                return false
+            }
+
+            let dialog = new DungeonScrawlImporterFormApplication()
+            return dialog.render(true)
+        })
+
+        $(html).find('.directory-header').prepend(button)
+    }
+})
 """
 #endif
-Browser.Dom.window?hello<-"world"
